@@ -36,6 +36,21 @@
       align-items: center;
       margin-left: 7rem;
     }
+
+    .love-icon {
+      margin-left: 16rem;
+      opacity: 1;
+    }
+
+    .upper-footer {
+      margin-left: 33rem;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
+
+    .upper-footer button {
+      margin-left: 4rem;
+    }
   </style>
 
   <div id="filters">
@@ -111,14 +126,19 @@
         <div class="card-img-overlay"></div>
         <div class="card-body">
           <p class="card-text">
-            <b> <%= listing.title %> </b> <br />
+            <b> <%= listing.title %> </b><br />
             &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
             <span class="tax-info">&nbsp; + &nbsp;18% GST</span>
+            <span class="love-icon"><i class="fa-regular fa-heart"></i></span>
           </p>
         </div>
       </div>
     </a>
     <% } %>
+  </div>
+  <div class="upper-footer">
+    <h6><b>Continue exploring Countryside</b></h6>
+    <button class="btn btn-dark mt-3 button"><b>Show more</b></button>
   </div>
 </body>
 
