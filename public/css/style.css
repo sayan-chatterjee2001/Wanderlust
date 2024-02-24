@@ -51,8 +51,9 @@ body {
 }
 
 .f-info {
+  border-top: 1px solid grey;
   text-align: center;
-  height: 12rem;
+  height: 14rem;
   background-color: #ebebeb;
   display: flex;
   flex-wrap: wrap;
