@@ -21,6 +21,16 @@
     padding: 0.5rem 2rem 0.5rem 2rem;
     font-size: 0.9rem;
   }
+
+  .mode-toggle {
+      align-items: center;
+      margin-left: 57rem;
+      position: absolute;
+    }
+
+    .mode-toggle:hover {
+      cursor: pointer;
+    }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -51,6 +61,21 @@
           </button>
         </form>
       </div>
+
+      <div class="mode-toggle">
+        <div class="form-check-reverse form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="modeSwitch"
+          />
+          <label class="form-check-label" for="modeSwitch"
+            >Change Mode</label
+          >
+        </div>
+      </div>
+
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Wanderlust your home</a>
         <% if(!currUser){ %>
@@ -63,3 +88,11 @@
     </div>
   </div>
 </nav>
+
+<script>
+  let modeSwitch = document.getElementById("modeSwitch");
+  console.log(modeSwitch);
+  modeSwitch.addEventListener("click", ()=>{
+    document.body.classList.toggle("dark-theme");
+  })
+</script>

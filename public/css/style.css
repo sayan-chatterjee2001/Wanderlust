@@ -1,3 +1,23 @@
+:root {
+  --primary-color: white;
+  --secondary-color: #222;
+  --nav-color: #222222;
+  --footer-color: #f1efef;
+}
+
+.dark-theme {
+  --primary-color: #35374B; 
+  --secondary-color: white;
+  --nav-color: white;
+  --footer-color: #35374B;
+}
+
+/* Index Page */
+.index-page {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   display: flex;
@@ -12,7 +32,8 @@ body {
 /* Navbar */
 .navbar {
   height: 5rem;
-  background-color: white;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .fa-compass {
@@ -21,13 +42,48 @@ body {
 }
 
 .nav-link {
-  color: #222222 !important;
+  color: var(--nav-color) !important;
 }
 
 /* Footer */
+/* Upper Footer */
+.upper-f {
+  height: 20rem;
+  background-color: var(--footer-color);           /* f1efef */
+  border-top: 1px solid rgb(190, 187, 187);
+  display: flex;
+  color: var(--secondary-color);
+}
+
+.upper-f-list-head {
+  margin-left: 4rem;
+  font-size: 1rem;
+}
+
+.upper-f a {
+  text-decoration: none;
+  color: var(--secondary-color);             /* 222222*/
+  margin-left: 4rem;
+  font-size: 0.9rem;
+}
+
+.upper-f a:hover {
+  text-decoration: underline;
+}
+
+.upper-f-info-2 {
+  margin-left: 20rem;
+}
+
+.upper-f-info-3 {
+  margin-left: 20rem;
+}
+
+/* Lower footer */
+
 .f-info-links a {
   text-decoration: none;
-  color: #222222;
+  color: var(--secondary-color);
   margin-right: 0.5rem;
 }
 
@@ -54,15 +110,16 @@ body {
   border-top: 1px solid rgb(190, 187, 187);
   text-align: center;
   height: 14rem;
-  background-color: #f1efef;
+  background-color: var(--footer-color);              /* f1efef */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: space-evenly;
+  color: var(--secondary-color);
 }
 
 .f-info a i {
-  color: #fe424d;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -70,7 +127,7 @@ body {
   margin-left: 1.5rem;
 }
 
-.f-info-links a{
+.f-info-links a {
   margin-bottom: 1rem;
 }
 
@@ -88,10 +145,16 @@ body {
 
 .card-body {
   padding: 0 !important;
+  background-color: var(--primary-color);
+  
 }
 
 .card-text p {
   font-weight: 400 !important;
+}
+
+.card-text {
+  color: var(--secondary-color);
 }
 
 .listing-links {
@@ -104,9 +167,9 @@ body {
 }
 
 .card-img-overlay:hover {
-  opacity: 0.1;
-  background-color: white;
-  box-shadow: 5px 5px 5px black;
+  opacity: 0.2;
+  background-color: var(--primary-color);
+  box-shadow: 5px 5px 5px var(--secondary-color);
   transition: 0.5s;
 }
 
