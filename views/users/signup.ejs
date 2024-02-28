@@ -13,9 +13,23 @@
     --nav-color: white;
     --footer-color: #35374b;
   }
+
   body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+  }
+
+  .input-container {
+    position: relative;
+  }
+
+  .eye-icon {
+    position: absolute;
+    top: 63%;
+    right: 8px;
+    transform: translate(-50%);
+    cursor: pointer;
+    color: #222 !important;
   }
 </style>
 
@@ -46,7 +60,7 @@
           required
         />
       </div>
-      <div class="mb-3">
+      <div class="mb-3 input-container">
         <label for="password" class="form-label">Password</label>
         <input
           type="password"
@@ -55,8 +69,37 @@
           class="form-control"
           required
         />
+        <i
+          class="fa-regular fa-eye eye-icon"
+          id="showPasswordIcon"
+          onclick="togglePasswordVisibility()"
+        ></i>
+        <i
+          class="fa-regular fa-eye-slash eye-icon"
+          id="hidePasswordIcon"
+          onclick="togglePasswordVisibility()"
+          style="display: none"
+        ></i>
       </div>
       <button class="btn btn-success mb-3">Sign up</button>
     </form>
   </div>
 </div>
+
+<script>
+  function togglePasswordVisibility() {
+    let passwordInput = document.getElementById("password");
+    let showPasswordIcon = document.getElementById("showPasswordIcon");
+    let hidePasswordIcon = document.getElementById("hidePasswordIcon");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      showPasswordIcon.style.display = "none";
+      hidePasswordIcon.style.display = "block";
+    } else {
+      passwordInput.type = "password";
+      showPasswordIcon.style.display = "block";
+      hidePasswordIcon.style.display = "none";
+    }
+  }
+</script>

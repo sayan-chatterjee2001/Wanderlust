@@ -225,7 +225,7 @@ body {
 } 
 
 .show-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
   cursor: pointer;
 }
 
@@ -233,4 +233,6 @@ body {
 #map {
   height: 400px;
   width: 80vh;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
