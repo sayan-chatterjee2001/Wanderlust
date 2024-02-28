@@ -1,4 +1,24 @@
 <% layout("/layouts/boilerplate") %>
+<style>
+  :root {
+    --primary-color: white;
+    --secondary-color: #222;
+    --nav-color: #222222;
+    --footer-color: #f1efef;
+  }
+
+  .dark-theme {
+    --primary-color: #35374b;
+    --secondary-color: white;
+    --nav-color: white;
+    --footer-color: #35374b;
+  }
+  body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+</style>
+
 <div class="row mt-3">
   <h3 class="col-6 offset-3 mb-3">SignUp for WanderLust</h3>
   <div class="col-6 offset-3">
@@ -36,7 +56,7 @@
           required
         />
       </div>
-      <button class="btn btn-success">Sign up</button>
+      <button class="btn btn-success mb-3">Sign up</button>
     </form>
   </div>
 </div>

@@ -23,20 +23,21 @@
   }
 
   .mode-toggle {
-      align-items: center;
-      margin-left: 57rem;
-      position: absolute;
-    }
+    align-items: center;
+    margin-left: 57rem;
+    position: absolute;
+  }
 
-    .mode-toggle:hover {
-      cursor: pointer;
-    }
+  .mode-toggle:hover {
+    cursor: pointer;
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"
-      ><i class="fa-regular fa-compass"></i></a>
+      ><i class="fa-regular fa-compass"></i
+    ></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -69,6 +70,7 @@
             type="checkbox"
             role="switch"
             id="modeSwitch"
+            onclick="toggleFunction()"
           />
           <label class="form-check-label" for="modeSwitch"
             >Change Mode</label
@@ -79,7 +81,7 @@
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Wanderlust your home</a>
         <% if(!currUser){ %>
-          <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+        <a class="nav-link" href="/signup"><b>Sign Up</b></a>
         <a class="nav-link" href="/login"><b>Login</b></a>
         <% } %> <% if(currUser){ %>
         <a class="nav-link" href="/logout"><b>Logout</b></a>
@@ -91,8 +93,8 @@
 
 <script>
   let modeSwitch = document.getElementById("modeSwitch");
-  console.log(modeSwitch);
-  modeSwitch.addEventListener("click", ()=>{
+  
+  modeSwitch.addEventListener("click", (event) => {
     document.body.classList.toggle("dark-theme");
-  })
+  }); 
 </script>

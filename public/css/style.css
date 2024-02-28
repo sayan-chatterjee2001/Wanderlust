@@ -138,13 +138,13 @@ body {
 }
 
 .card-img-top {
-  border-radius: 1rem !important;
+  border-radius: 0.5rem !important;
   width: 100% !important;
   object-fit: cover !important;
 }
 
 .card-body {
-  padding: 0 !important;
+  padding: 5px !important;
   background-color: var(--primary-color);
   
 }
@@ -164,13 +164,27 @@ body {
 /* card effect */
 .card-img-overlay {
   opacity: 0;
+  box-shadow: 0 6px 6px -1px var(--secondary-color);
 }
 
 .card-img-overlay:hover {
-  opacity: 0.2;
+  opacity: 0.1;
   background-color: var(--primary-color);
-  box-shadow: 5px 5px 5px var(--secondary-color);
+  box-shadow: 0 6px 6px -1px var(--secondary-color);
   transition: 0.5s;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  transition: all 1.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
 }
 
 /* New page */
@@ -204,6 +218,15 @@ body {
 .card-text {
   margin-top: 0.5rem;
   line-height: 1.5rem;
+}
+
+.show-card img {
+  transition: all 1.5s;
+} 
+
+.show-card:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* Map */

@@ -1,10 +1,28 @@
 <% layout("/layouts/boilerplate.ejs") %>
 <body>
   <style>
+    :root {
+      --primary-color: white;
+      --secondary-color: #222;
+      --nav-color: #222222;
+      --footer-color: #f1efef;
+    }
+
+    .dark-theme {
+      --primary-color: #35374b;
+      --secondary-color: white;
+      --nav-color: white;
+      --footer-color: #35374b;
+    }
+
     #filters {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+    }
+
+    body {
+      background-color: var(--primary-color);
     }
 
     .filter {
@@ -114,7 +132,8 @@
         </div>
       </div>
     </div>
-    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 mt-2">          <!--row-cols-md-2--> 
+    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 mt-2">
+      <!--row-cols-md-2-->
       <% for(let listing of allListings){ %>
       <a href="/listings/<%=listing._id%>" class="listing-links">
         <div class="card col listing-card">
